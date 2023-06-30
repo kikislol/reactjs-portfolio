@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import astronautHelmet from "../../assets/astronaut-helmet.png";
 import deadEye from "../../assets/dead-eye.png";
@@ -13,13 +13,13 @@ export default function Nav() {
         switch (location.pathname) {
             case "/":
                 return "nav-about";
-            case "/":
+            case "/skills":
                 return "nav-skills";
-            case "/":
+            case "/projects":
                 return "nav-projects";
-            case "/":
+            case "/contact":
                 return "nav-contact";
-            case "/":
+            default:
                 return "";
         }
     };
@@ -28,13 +28,13 @@ export default function Nav() {
         switch (location.pathname) {
             case "/":
                 return "ABOUT";
-            case "/":
+            case "/skills":
                 return "SKILLS";
-            case "/":
+            case "/projects":
                 return "PROJECTS";
-            case "/":
+            case "/contact":
                 return "CONTACT";
-            case "/":
+            default:
                 return "";
         }
     };
