@@ -7,15 +7,16 @@
 .avatar.about {
     height: 89vh;
     bottom: -8vh;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 50%;
+    /* transform: translateX(-50%); */
+    transform: translateX(50%) scaleX(-1);
 }
 
 .avatar.skills {
     height: 190vh;
     bottom: -110vh;
     left: -1.5rem;
-    transform: translateX(0%) scaleX(-1);
+    /* transform: translateX(0%) scaleX(-1); */
 }
 
 .shadow-overlay-skills {
@@ -33,16 +34,31 @@
 
 @media (max-width: 1100px) {
     .avatar.skills {
-        z-index: -5;
+        z-index: -2;
         height: 95vh;
         bottom: -15vh;
     }
-}
 
-@media (max-width: 700px) {
     .avatar.about {
-        z-index: -5;
         height: 95vh;
-        bottom: -15vh;
+        bottom: -5vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .shadow-overlay-about,
+    .shadow-overlay-skills {
+        height: 100vh;
+        width: 100vh;
+        top: 0;
+        left: 0;
+        display: block;
+        position: fixed;
+        background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(255, 255, 255, 0)
+        );
+        z-index: -1;
     }
 }
