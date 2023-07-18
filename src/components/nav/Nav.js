@@ -4,11 +4,11 @@ import astronautHelmet from "../../assets/astronaut-helmet.png";
 import deadEye from "../../assets/dead-eye.png";
 import stack from "../../assets/stack.png";
 import envelope from "../../assets/envelope.png";
-
 import "../../styles/nav.css";
 
 export default function Nav() {
     const location = useLocation();
+
     const getNavPositionClass = () => {
         switch (location.pathname) {
             case "/":
@@ -42,7 +42,7 @@ export default function Nav() {
     const navPositionClass = getNavPositionClass();
     const pageTitle = getPageTitle();
     const isCurrentPage = (navClass) => {
-        return navClass === getNavPositionClass;
+        return navClass === navPositionClass;
     };
 
     const renderNavLink = (to, imgSrc, altText, navClass) => {
